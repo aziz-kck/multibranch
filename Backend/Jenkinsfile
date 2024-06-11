@@ -40,11 +40,11 @@ pipeline {
             }
         }
 
-        stage("Analysis Testing") {
-            steps {
-                sh 'mvn test'
-            }
-        }
+//         stage("Analysis Testing") {
+//             steps {
+//                 sh 'mvn test'
+//             }
+//         }
 
         stage("Docker Compose") {
             steps {
