@@ -6,7 +6,9 @@ pipeline {
 
         stage('Clean') {
             steps {
-                sh 'mvn clean'
+                dir('backend') {
+                   sh 'mvn clean'
+                }
             }
         }
 
