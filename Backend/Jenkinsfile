@@ -14,13 +14,17 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh 'mvn compile'
+               dir('Backend') {
+                  sh 'mvn compile'
+               }
             }
         }
 
         stage ('Building image'){
                 steps{
+                    dir('Backend') {
                 sh 'docker build -t azizk99/stock_backend:1.0 .'
+                    }
                 }
             }
 
